@@ -12,6 +12,11 @@ class Room(MycroftSkill):
             self.speak_dialog('room', data={
                 'roomname': roomname
             })
+            response = self.ask_yesno('Do_you_want_me_to_repeat')
+            if response == 'yes':
+                self.speak_dialog("i_don't_know_about_the",
+                              {'type': meeting_type})
+                self.speak_dialog('Have_a_nice_day')
         else:
 
             self.speak_dialog('test')
