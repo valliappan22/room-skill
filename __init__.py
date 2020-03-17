@@ -14,15 +14,15 @@ class Room(MycroftSkill):
             response = self.ask_yesno('')
             if response == 'yes':
                 self.speak_dialog('room', data={'roomname': roomname})
-                self.speak_dialog('anything')
-                 resp = self.ask_yesno('')
-                 if resp == 'no':
-                     self.speak_dialog('day')
-            else:
-                 self.speak_dialog('anything')
-                 resp = self.ask_yesno('')
-                 if resp == 'no':
-                     self.speak_dialog('day')
+            #     self.speak_dialog('anything')
+            #      resp = self.ask_yesno('')
+            #      if resp == 'no':
+            #          self.speak_dialog('day')
+            # else:
+            #      self.speak_dialog('anything')
+            #      resp = self.ask_yesno('')
+            #      if resp == 'no':
+            #          self.speak_dialog('day')
 
         else:
             self.speak_dialog('test')
