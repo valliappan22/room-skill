@@ -18,11 +18,11 @@ class Room(MycroftSkill):
                 resp = self.ask_yesno('')
                 if resp == 'no':
                     self.speak_dialog('day')
-            # else:
-            #      self.speak_dialog('anything')
-            #      resp = self.ask_yesno('')
-            #      if resp == 'no':
-            #          self.speak_dialog('day')
+            else:
+                 self.speak_dialog('anything')
+                 resp = self.ask_yesno('')
+                 if resp == 'no':
+                     self.speak_dialog('day')
 
         else:
             self.speak_dialog('test')
