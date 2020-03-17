@@ -12,10 +12,13 @@ class Room(MycroftSkill):
             self.speak_dialog('room', data={
                 'roomname': roomname
             })
+            self.speak_dialog('repeat')
+            response = self.ask_yesno('')
+            if response == 'yes':
+                self.speak_dialog('day')
 
         else:
             self.speak_dialog('test')
-            self.get_response('room', num_retries=0)
 
 
 def create_skill():
